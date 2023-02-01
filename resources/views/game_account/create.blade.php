@@ -14,7 +14,9 @@
              <div>
                 <h2>ゲーム</h2>
                 <select name='game_account[game_id]'>
-                    <option value='1'>Apex</option>
+                    @foreach ($gamelist as $game)
+                        <option value='{{$game->id}}'>{{$game->game_name}}</option>
+                    @endforeach    
                 </select>
             </div>
             <div>

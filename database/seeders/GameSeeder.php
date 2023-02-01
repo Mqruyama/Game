@@ -15,7 +15,7 @@ class GameSeeder extends Seeder
      */
     public function run()
     {
-        Game::truncate();　//データの削除
+        Game::truncate();//データの削除
         Game::create([
             'game_name' => 'Apex'
         ]);

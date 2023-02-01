@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Game;
 
 class GameAccountController extends Controller
 {
@@ -12,6 +13,8 @@ class GameAccountController extends Controller
     
     
      public function create(){
-        return view ('game_account.create');
+         $gamelist = Game::get();
+         return view ('game_account.create')->with([
+             'gamelist' => $gamelist,]);
     }
 }
