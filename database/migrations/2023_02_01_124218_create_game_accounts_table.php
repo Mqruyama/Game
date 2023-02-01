@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('game_accounts', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id');
+            $table->bigInteger('game_id');
+            $table->string('game_account_name', 256);
             $table->timestamps();
         });
     }
