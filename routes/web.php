@@ -32,3 +32,5 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/game_account', [GameAccountController::class, 'index'])->name('GameAccount.index');
+Route::get('/game_account/create', [GameAccountController::class, 'create'])->name('GameAccount.create');
+Route::post('/game_account/insert', [GameAccountController::class, 'insert'])->name('GameAccount.insert');
