@@ -24,6 +24,10 @@
                 <input type="text" name="game_account_name" placeholder="アカウント名"
                 value="{{$account->game_account_name}}"/>
             </div>
+            <h2>プラットフォーム</h2>
+                <input type="text" name="game_account_name" placeholder="PS4/PC"
+                value="{{$account->game_account_platform}}"/>
+            </div>
             <input type="submit" value="update"/>
         </form>
         <div class="footer">
@@ -33,4 +37,5 @@
             </div>
         </div>
     </div>
+    
 </x-app-layout>

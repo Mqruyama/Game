@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class GameAccountController extends Controller
 {
     public function index(){
-        $GameAccountList = GameAccount::get();
+        $GameAccountList = GameAccount::with('user')->with('game')->get();
         return view('game_account.index')->with(['GameAccountList' => $GameAccountList,]);
     }
     
@@ -33,6 +33,7 @@ class GameAccountController extends Controller
         $gameAccountInstance->user_id = Auth::id();
         $gameAccountInstance->game_id = $request->input('game_id');
         $gameAccountInstance->game_account_name = $request->input('game_account_name');
+        $gameAccountInstance->game_account_platform = $request->input('game_account_name');
         $gameAccountInstance->save();
         
         return redirect()->route('GameAccount.index');

@@ -23,6 +23,10 @@
                 <h2>アカウント名</h2>
                 <input type="text" name="game_account_name" placeholder="アカウント名"/>
             </div>
+            <div>
+                <h2>プラットフォーム</h2>
+                <input type="text" name="game_account_platform" placeholder="PS4/PC"/>
+            </div>
             <input type="submit" value="store"/>
         </form>
         <div class="footer">
