@@ -12,7 +12,26 @@
                     <div>
                         <a href="{{route('GameAccount.create')}}">アカウント入力</a>
                     </div>
-                    //アカウント一覧
+                    <h3>ゲームアカウント　一覧</h3>
+                    <table>
+                        <tr>
+                            <th>ユーザー</th>
+                            <th>ゲーム</th>
+                            <th>ゲームアカウント</th>
+                            <th>操作</th>
+                        </tr>
+                        @foreach($GameAccountList as $account)
+                        <tr>
+                            <td>{{$account->user_id}}</td>
+                            <td>{{$account->game_id}}</td>
+                            <td>{{$account->game_account_name}}</td>
+                            <td>
+                                <a href="{{route('GameAccount.edit', ['account'=>$account->id])}}">編集</a>
+                                <a href="{{route('GameAccount.delete', ['account'=>$account->id])}}">削除</a>
+                            </td>
+                        </tr>
+                        @endforeach
+                    </table>
                 </div>
             </div>
         </div>

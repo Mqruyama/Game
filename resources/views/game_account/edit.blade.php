@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <form action="{{route('GameAccount.insert')}}" method="POST">
+                    <form action="{{route('GameAccount.update', ['account'=>$account->id])}}" method="POST">
             @csrf
              <div>
                 <h2>ゲーム</h2>
@@ -21,9 +21,10 @@
             </div>
             <div>
                 <h2>アカウント名</h2>
-                <input type="text" name="game_account_name" placeholder="アカウント名"/>
+                <input type="text" name="game_account_name" placeholder="アカウント名"
+                value="{{$account->game_account_name}}"/>
             </div>
-            <input type="submit" value="store"/>
+            <input type="submit" value="update"/>
         </form>
         <div class="footer">
             <a href="{{route('GameAccount.index')}}">戻る</a>

@@ -34,3 +34,6 @@ require __DIR__.'/auth.php';
 Route::get('/game_account', [GameAccountController::class, 'index'])->name('GameAccount.index');
 Route::get('/game_account/create', [GameAccountController::class, 'create'])->name('GameAccount.create');
 Route::post('/game_account/insert', [GameAccountController::class, 'insert'])->name('GameAccount.insert');
+Route::get('/game_account/{account}/edit', [GameAccountController::class, 'edit'])->name('GameAccount.edit');
+Route::post('/game_account/{account}/update', [GameAccountController::class, 'update'])->name('GameAccount.update');
+Route::get('/game_account/{account}/delete', [GameAccountController::class, 'delete'])->name('GameAccount.delete');
