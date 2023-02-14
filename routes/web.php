@@ -37,3 +37,4 @@ Route::post('/game_account/insert', [GameAccountController::class, 'insert'])->n
 Route::get('/game_account/{account}/edit', [GameAccountController::class, 'edit'])->name('GameAccount.edit');
 Route::post('/game_account/{account}/update', [GameAccountController::class, 'update'])->name('GameAccount.update');
 Route::get('/game_account/{account}/delete', [GameAccountController::class, 'delete'])->name('GameAccount.delete');
+Route::get('/game_account/{account}/show', [GameAccountController::class, 'show'])->name('GameAccount.show');

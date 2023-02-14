@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('game_name', 256);
             $table->timestamps();
+            
         });
     }
 

@@ -52,4 +52,10 @@ class GameAccountController extends Controller
         
         return redirect()->route('GameAccount.index');
     }
+    
+    public function show(GameAccount $account){
+        return view('game_account/show')->with(['account' => $account]);
+        
+    }    
+         
 }

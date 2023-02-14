@@ -24,11 +24,41 @@
                 <input type="text" name="game_account_name" placeholder="アカウント名"
                 value="{{$account->game_account_name}}"/>
             </div>
-            <h2>プラットフォーム</h2>
-                <input type="text" name="game_account_name" placeholder="PS4/PC"
-                value="{{$account->game_account_platform}}"/>
+            <div>
+                <h2>プラットフォーム</h2>
+                 <label>
+                  <input type="radio" name="game_account_platform" value="PC">
+                  PC
+                </label>
+                <label>
+                  <input type="radio" name="game_account_platform" value="CS">
+                  CS
+                </label>
+                <label>
+                  <input type="radio" name="game_account_platform" value="Switch">
+                  Switch
+                </label>
             </div>
-            <input type="submit" value="update"/>
+            <div>
+                <h2>性別</h2>
+                <label>
+                  <input type="radio" name="game_account_gender" value="男">
+                  男
+                </label>
+                <label>
+                  <input type="radio" name="game_account_gender" value="女">
+                  女
+                </label>
+                <label>
+                  <input type="radio" name="game_account_gender" value="その他">
+                  その他
+                </label>
+            </div>
+            <div>
+                <h2>プレイ時間帯</h2>
+                <input type="time" name="example">　～　<input type="time" name="example">
+            </div>
+            <input type="submit" value="保存"/>
         </form>
         <div class="footer">
             <a href="{{route('GameAccount.index')}}">戻る</a>

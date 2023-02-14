@@ -21,11 +21,41 @@
             </div>
             <div>
                 <h2>アカウント名</h2>
-                <input type="text" name="game_account_name" placeholder="アカウント名"/>
+                <input type="text" name="game_account_name" placeholder="アカウント名">
             </div>
             <div>
                 <h2>プラットフォーム</h2>
-                <input type="text" name="game_account_platform" placeholder="PS4/PC"/>
+                 <label>
+                  <input type="radio" name="game_account_platform" value="PC">
+                  PC
+                </label>
+                <label>
+                  <input type="radio" name="game_account_platform" value="CS">
+                  CS
+                </label>
+                <label>
+                  <input type="radio" name="game_account_platform" value="Switch">
+                  Switch
+                </label>
+            </div>
+            <div>
+                 <h2>性別</h2>
+                <label>
+                  <input type="radio" name="game_account_gender" value="男">
+                  男
+                </label>
+                <label>
+                  <input type="radio" name="game_account_gender" value="女">
+                  女
+                </label>
+                <label>
+                  <input type="radio" name="game_account_gender" value="その他">
+                  その他
+                </label>
+            </div>
+            <div>
+                <h2>プレイ時間帯</h2>
+                <input type="time" name="example">　～　<input type="time" name="example">
             </div>
             <input type="submit" value="store"/>
         </form>

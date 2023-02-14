@@ -14,7 +14,7 @@ class GameAccount extends Model
     }
     
     public function game(){
-        return $this->belongsTo(User::class, 'game_id',);
+        return $this->belongsTo(Game::class, 'game_id',);
     }
     
 }
